@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Product.destroy_all
+
+5.times do
+  new_category = Category.create(category_name: Faker::Commerce.department)
+  100.times do
+    new_category.products.create(product_name: Faker::Commerce.product_name,
+                                 sku: Faker::Number.unique.number(7),
+                                 price: Faker::Number.between(1,100),
+                                 stock_quantity: Faker::Number.between(1,999))
+
+    puts "Successfully ran seed script."
+    puts "Generated #{Product.count} products."
+    puts "Generated #{Category.count} categories."
+  end
+end
