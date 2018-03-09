@@ -8,7 +8,7 @@
           <h5 class="title">Create/Edit Product</h5>
         </div>
         <div class="card-body">
-        <%= form_with(model: product, local: true) do |form| %>
+        <%= form_with(model: product, local: true, html: { multipart: true }) do |form| %>
           <% if product.errors.any? %>
             <div id="error_explanation">
               <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -62,6 +62,15 @@
                 <div class="form-group">
                   <%= form.label :description %>
                   <%= form.text_area :description, id: :product_description, :class=>'form-control' %>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <%= form.label :product_image %>
+                  <%= form.file_field :product_image, id: :product_image, :class=>'form-control' %>
                 </div>
               </div>
             </div>
