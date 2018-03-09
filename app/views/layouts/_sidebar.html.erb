@@ -3,11 +3,8 @@
 Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
 -->
   <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-      CT
-    </a>
-    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-      Creative Tim
+    <a href="http://foodkady.com" class="simple-text logo-normal">
+      FoodKADY Admin Panel
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -43,6 +40,12 @@ Tip 1: You can change the color of the sidebar using: data-color="blue | green |
         </a>
       </li>
       <li>
+        <%= link_to products_path do %>
+        <i class="now-ui-icons design_bullet-list-67"></i>
+        <p>Products</p>
+      <% end %>
+      </li>
+        <li>
         <a href="../examples/tables.html">
           <i class="now-ui-icons design_bullet-list-67"></i>
           <p>Table List</p>
