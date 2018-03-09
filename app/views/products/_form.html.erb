@@ -25,7 +25,7 @@
               <div class="col-md-6 pr-1">
                 <div class="form-group">
                   <%= form.label :product_name %>
-                  <%= form.text_field :product_name, id: :product_product_name, :class=>'form-control' %>
+                  <%= form.text_field :product_name, id: :product_name, :class=>'form-control' %>
                 </div>
               </div>
             </div>
@@ -60,6 +60,21 @@
             <div class="row">
               <div class="col-md-6 pr-1">
                 <div class="form-group">
+                  <%= form.label :category_name %>
+                  <%= collection_select(:product,
+                                        :category_id,
+                                        Category.all,
+                                        :id,
+                                        :category_name,
+                                        {},
+                                        {:multiple => false}) %>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
                   <%= form.label :description %>
                   <%= form.text_area :description, id: :product_description, :class=>'form-control' %>
                 </div>
@@ -78,7 +93,7 @@
           <div class="row">
             <div class="col-md-6 pr-1">
               <div class="form-group">
-                <%= form.submit 'Create Product' ,:class => 'form-control' %>
+                <%= form.submit 'Save Product' ,:class => 'form-control' %>
               </div>
             </div>
           </div>

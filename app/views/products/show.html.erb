@@ -1,7 +1,7 @@
 
 <div class="panel-header panel-header-sm">
 </div>
-<div class="content">
+<dixv class="content">
   <div class="row">
     <div class="col-md-8">
       <div class="card">
@@ -12,45 +12,14 @@
           <p id="notice"><%= notice %></p>
 
           <p>
-            <strong>Product name:</strong>
-            <%= @product.product_name %>
+            <strong>Category name:</strong>
+            <%= @category.category_name %>
           </p>
 
-          <p>
-            <strong>Sku:</strong>
-            <%= @product.sku %>
-          </p>
-
-          <p>
-            <strong>Description:</strong>
-            <%= @product.description %>
-          </p>
-
-          <p>
-            <strong>Price:</strong>
-            <%= @product.price %>
-          </p>
-
-          <p>
-            <strong>Stock quantity:</strong>
-            <%= @product.stock_quantity %>
-          </p>
-
-          <%= link_to 'Edit', edit_product_path(@product) %> |
-          <%= link_to 'Back', products_path %>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card card-user">
-        <div class="card-body">
-          <div class="author">
-            <a href="#">
-              <%= image_tag @product.product_image.url{:medium} %>
-            </a>
-          </div>
+          <%= link_to 'Edit', edit_category_path(@category) %> |
+          <%= link_to 'Back', categories_path %>
         </div>
       </div>
     </div>
   </div>
-</div>
+</dixv>
