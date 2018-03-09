@@ -1,0 +1,60 @@
+
+<div class="panel-header panel-header-sm">
+</div>
+<div class="content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Product List</h4>
+        </div>
+        <div class="card-body">
+          <p id="notice"><%= notice %></p>
+
+          <p>
+            <strong>Product name:</strong>
+            <%= @product.product_name %>
+          </p>
+
+          <p>
+            <strong>Sku:</strong>
+            <%= @product.sku %>
+          </p>
+
+          <p>
+            <strong>Description:</strong>
+            <%= @product.description %>
+          </p>
+
+          <p>
+            <strong>Price:</strong>
+            <%= @product.price %>
+          </p>
+
+          <p>
+            <strong>Stock quantity:</strong>
+            <%= @product.stock_quantity %>
+          </p>
+
+          <%= link_to 'Edit', edit_product_path(@product) %> |
+          <%= link_to 'Back', products_path %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-user">
+        <div class="image">
+          <img src="../assets/img//bg5.jpg" alt="...">
+        </div>
+        <div class="card-body">
+          <div class="author">
+            <a href="#">
+              <img class="avatar border-gray" src="../assets/img//mike.jpg" alt="...">
+              <h5 class="title">Mike Andrew</h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
