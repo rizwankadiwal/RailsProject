@@ -8,6 +8,7 @@
 
 
 Product.destroy_all
+Category.destroy_all
 
 5.times do
   new_category = Category.create(category_name: Faker::Commerce.department)
