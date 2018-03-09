@@ -10,10 +10,10 @@ Tip 1: You can change the color of the sidebar using: data-color="blue | green |
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li class="active">
-        <a href="../examples/dashboard.html">
+        <%= link_to admin_path do %>
           <i class="now-ui-icons design_app"></i>
           <p>Dashboard</p>
-        </a>
+        <% end %>
       </li>
       <li>
         <a href="../examples/icons.html">
@@ -52,10 +52,10 @@ Tip 1: You can change the color of the sidebar using: data-color="blue | green |
         <% end %>
       </li>
       <li>
-        <a href="../examples/typography.html">
-          <i class="now-ui-icons text_caps-small"></i>
-          <p>Typography</p>
-        </a>
+        <%= link_to aboutus_path do %>
+          <i class="now-ui-icons design_bullet-list-67"></i>
+          <p>About Us</p>
+        <% end %>
       </li>
     </ul>
   </div>

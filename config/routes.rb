@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'search', to: 'search#index', as: 'search'
   resources :products
   get 'admin', to: 'application#admin'
+  get 'aboutus', to: 'application#aboutus'
 end
